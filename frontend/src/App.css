@@ -1,0 +1,190 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f3f5fa;
+  color: #20243a;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+.header {
+  background: #242b55;
+  color: white;
+  padding: 35px 20px;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+  font-size: 32px;
+}
+
+.header p {
+  margin: 0;
+  color: #d8dcf5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 35px auto;
+  padding: 0 20px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 25px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.stat-card h2 {
+  color: #515bd4;
+  font-size: 30px;
+  margin: 0 0 8px;
+}
+
+.stat-card p {
+  color: #777;
+  margin: 0;
+}
+
+.task-form,
+.task-list {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 12px #0000000d;
+}
+
+.task-form h2,
+.task-list h2 {
+  margin-top: 0;
+}
+
+.task-form form {
+  display: flex;
+  gap: 12px;
+}
+
+input,
+select {
+  padding: 13px;
+  border: 1px solid #ddd;
+  border-radius: 7px;
+  font-size: 15px;
+  min-width: 0;
+}
+
+input {
+  flex: 1;
+}
+
+button {
+  border: none;
+  padding: 12px 17px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.task-form button {
+  background: #515bd4;
+  color: white;
+}
+
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #eee;
+  border-radius: 9px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.task-info h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.priority {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.high {
+  background: #ffe3e3;
+  color: #c62828;
+}
+
+.medium {
+  background: #fff1d6;
+  color: #a56800;
+}
+
+.low {
+  background: #ddf5e5;
+  color: #238044;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.complete-btn {
+  background: #e1f4e8;
+  color: #218044;
+}
+
+.delete-btn {
+  background: #ffe3e3;
+  color: #c62828;
+}
+
+.empty {
+  color: #888;
+  text-align: center;
+  padding: 20px;
+}
+
+@media (max-width: 600px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .task-form form {
+    flex-direction: column;
+  }
+
+  .task-card {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .actions {
+    width: 100%;
+  }
+}
